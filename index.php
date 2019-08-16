@@ -17,7 +17,7 @@ try
         echo "<h3>Há posts cadastrados</h3>";
         foreach($dado->fetchAll() as $post)
         {
-            echo "<p><b>Título</b>: ".$post['título']."<br>";
+            echo "<p><b>Título</b>: ".$post['titulo']."<br>";
             echo "<b>Autor</b>: <i>".$post['autor']."</i>";
             echo " - <b>Data de criação</b>: ".$post['data_criado']."</p>";
             echo "<p><b>Conteúdo: </b><br>".$post['conteudo']."</p><br>";
