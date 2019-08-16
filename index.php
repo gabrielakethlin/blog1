@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:dbname=blog;host=127.0.0.1";
+$dsn = "mysql:dbname=blog1;host=127.0.0.1";
 $dbuser = "root";
 $dbpass = "";
 
@@ -7,22 +7,22 @@ $dbpass = "";
 try
 {
     $pdo = new PDO($dsn, $dbuser, $dbpass);
-    echo "Conexão estabelecida com sucesso!";
+    echo "<h1>Conexão estabelecida com sucesso!</h1>";
     
     $sql = "SELECT * FROM idposts";
     $dado = $pdo->query($sql);
     
-    if($dado->roeCount() > 0)
+    if($dado->rowCount() > 0)
     {
-        echo "Há posts cadastrados";
+        echo "<h3>Há posts cadastrados</h3>";
         
     }
     else
     {
-        echo "Não há opsts cadastrados";
+        echo "<h3>Não há opsts cadastrados</h3>";
     }
 }
 catch(PDOException $e)
 {
-   echo"Falhou: ".$e->getMenssage(); 
+   echo "<h2>Falhou: ".$e->getMenssage()."</h2>"; 
 }
