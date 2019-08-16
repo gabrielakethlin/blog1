@@ -19,7 +19,7 @@ try
     }
     else
     {
-        echo "<h3>Não há opsts cadastrados</h3>";
+        echo "<h3>Não há posts cadastrados</h3>";
     }
 }
 catch(PDOException $e)
